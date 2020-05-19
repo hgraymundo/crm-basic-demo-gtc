@@ -100,21 +100,28 @@
           </a>
         </li>
          <li class="nav-item">
-          <a href="index.html">
+          <a [routerLink]="['/platform/request']">
             <i class="fa fa-arrow-circle-right"></i>
             <p>Solicitudes</p>
             <!-- <span class="badge badge-count">5</span> -->
           </a>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <a href="index.html">
             <i class="fa fa-facebook-square"></i>
-            <p>Cuentas - Redes Sociales</p>
+            <p>Cuentas</p>
+            <!-- <span class="badge badge-count">5</span> -->
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/platform/post">
+            <i class="fa fa-facebook-square"></i>
+            <p>Post en FB</p>
             <!-- <span class="badge badge-count">5</span> -->
           </a>
         </li>
          <li class="nav-item">
-          <a href="index.html">
+          <a [routerLink]="['/platform/campaign']">
             <i class="fa fa-users"></i>
             <p>Campañas</p>
           </a>
