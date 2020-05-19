@@ -24,6 +24,9 @@ import { RequestComponent } from './request/request.component';
 import { CampaignComponent } from './campaign/campaign.component';
 import { NewCampaingComponent } from './new-campaing/new-campaing.component';
 import { NewCampaingEmailComponent } from './new-campaing-email/new-campaing-email.component';
+import { PublicationComponent } from './publication/publication.component';
+import { CommentComponent } from './comment/comment.component';
+import { NewCommentComponent } from './new-comment/new-comment.component';
 
 @NgModule({
   imports: [
@@ -47,7 +50,10 @@ import { NewCampaingEmailComponent } from './new-campaing-email/new-campaing-ema
     RequestComponent,
     CampaignComponent,
     NewCampaingComponent,
-    NewCampaingEmailComponent
+    NewCampaingEmailComponent,
+    PublicationComponent,
+    CommentComponent,
+    NewCommentComponent
   ],
   providers: [AuthGuard]
 })

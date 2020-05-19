@@ -19,7 +19,7 @@ export class RequestComponent implements OnInit {
 
   ngOnInit() {
     this.tmpService.getRequest().subscribe( result => {
-      console.log(result);
+      console.log(result.data);
       this.Requests = result.data;
     })
   }
