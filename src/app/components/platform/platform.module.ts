@@ -31,6 +31,7 @@ import { PersonalComponent } from './personal/personal.component';
 import { NewPersonalComponent } from './new-personal/new-personal.component';
 import { FbaccountComponent } from './fbaccount/fbaccount.component';
 import { NewFbaccountComponent } from './new-fbaccount/new-fbaccount.component';
+import { RobotComponent } from './robot/robot.component';
 
 @NgModule({
   imports: [
@@ -61,7 +62,8 @@ import { NewFbaccountComponent } from './new-fbaccount/new-fbaccount.component';
     PersonalComponent,
     NewPersonalComponent,
     FbaccountComponent,
-    NewFbaccountComponent
+    NewFbaccountComponent,
+    RobotComponent
   ],
   providers: [AuthGuard]
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TmpService } from '../../../services/tmp.service';
 
 @Component({
   selector: 'app-fbaccount',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FbaccountComponent implements OnInit {
 
-  constructor() { }
+  _id: any;
+  object_title = "Cuentas FB";
+  btn_new= "Nuevo Cuenta FB";
+  term: any;
+  Accounts: any[];
+  p: number = 1;
+
+  constructor(
+    private tmpService: TmpService
+  ) { }
 
   ngOnInit() {
+    this.tmpService.getFBAccount().subscribe( result => {
+      console.log(result);
+      this.Accounts = result.data;
+    })
   }
 
 }

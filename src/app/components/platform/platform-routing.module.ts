@@ -16,6 +16,8 @@ import { CommentComponent } from './comment/comment.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
 import { PersonalComponent } from './personal/personal.component';
 import { NewPersonalComponent } from './new-personal/new-personal.component';
+import { FbaccountComponent } from './fbaccount/fbaccount.component';
+import { RobotComponent } from './robot/robot.component';
 
 const platformRoutes: Routes = [
     { path: 'platform', component: PlatformComponent,
@@ -31,7 +33,9 @@ const platformRoutes: Routes = [
         { path: 'new-campaign-sms', component: NewCampaingComponent },
         { path: 'new-campaign-email', component: NewCampaingEmailComponent },
         { path: 'collaborator', component: PersonalComponent },
-        { path: 'new-collaborator', component: NewPersonalComponent }
+        { path: 'new-collaborator', component: NewPersonalComponent },
+        { path: 'fbaccount', component: FbaccountComponent },
+        { path: 'robot', component: RobotComponent }
 
       ]
     },
