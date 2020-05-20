@@ -27,6 +27,10 @@ import { NewCampaingEmailComponent } from './new-campaing-email/new-campaing-ema
 import { PublicationComponent } from './publication/publication.component';
 import { CommentComponent } from './comment/comment.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
+import { PersonalComponent } from './personal/personal.component';
+import { NewPersonalComponent } from './new-personal/new-personal.component';
+import { FbaccountComponent } from './fbaccount/fbaccount.component';
+import { NewFbaccountComponent } from './new-fbaccount/new-fbaccount.component';
 
 @NgModule({
   imports: [
@@ -53,7 +57,11 @@ import { NewCommentComponent } from './new-comment/new-comment.component';
     NewCampaingEmailComponent,
     PublicationComponent,
     CommentComponent,
-    NewCommentComponent
+    NewCommentComponent,
+    PersonalComponent,
+    NewPersonalComponent,
+    FbaccountComponent,
+    NewFbaccountComponent
   ],
   providers: [AuthGuard]
 })

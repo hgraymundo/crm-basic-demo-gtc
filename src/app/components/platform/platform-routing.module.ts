@@ -14,6 +14,8 @@ import { NewCampaingEmailComponent } from './new-campaing-email/new-campaing-ema
 import { PublicationComponent } from './publication/publication.component';
 import { CommentComponent } from './comment/comment.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
+import { PersonalComponent } from './personal/personal.component';
+import { NewPersonalComponent } from './new-personal/new-personal.component';
 
 const platformRoutes: Routes = [
     { path: 'platform', component: PlatformComponent,
@@ -28,6 +30,9 @@ const platformRoutes: Routes = [
         { path: 'campaign', component: CampaignComponent },
         { path: 'new-campaign-sms', component: NewCampaingComponent },
         { path: 'new-campaign-email', component: NewCampaingEmailComponent },
+        { path: 'collaborator', component: PersonalComponent },
+        { path: 'new-collaborator', component: NewPersonalComponent }
+
       ]
     },
 ];

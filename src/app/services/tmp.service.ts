@@ -39,8 +39,21 @@ export class TmpService {
   getFBComment():Observable<any> {
     return this.http.get<any>("http://51.222.31.215:8181/api/v1/fb_comment");
   }
+  
+  //  
+  creatColaborator(data: any):Observable<any> {
+    return this.http.post<any>("http://51.222.31.215:8181/api/v1/personal", data);
+  }
+  getColaborator():Observable<any> {
+    return this.http.get<any>("http://51.222.31.215:8181/api/v1/personal");
+  }
 
-
-
+  //
+  creatFBAccount(data: any):Observable<any> {
+    return this.http.post<any>("http://51.222.31.215:8181/api/v1/fb_account", data);
+  }
+  getFBAccount():Observable<any> {
+    return this.http.get<any>("http://51.222.31.215:8181/api/v1/fb_account");
+  }
 
 }
