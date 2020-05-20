@@ -56,4 +56,12 @@ export class TmpService {
     return this.http.get<any>("http://51.222.31.215:8181/api/v1/fb_account");
   }
 
+  //
+  createRobot(data: any):Observable<any> {
+    return this.http.post<any>("http://51.222.31.215:8181/api/v1/robot", data);
+  }
+  getRobot():Observable<any> {
+    return this.http.get<any>("http://51.222.31.215:8181/api/v1/robot");
+  }
+  
 }
