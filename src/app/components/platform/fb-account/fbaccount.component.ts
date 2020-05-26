@@ -10,7 +10,7 @@ export class FbaccountComponent implements OnInit {
 
   _id: any;
   object_title = "Cuentas FB";
-  btn_new= "Nuevo Cuenta FB";
+  btn_new= "Nueva Cuenta FB";
   term: any;
   Accounts: any[];
   p: number = 1;

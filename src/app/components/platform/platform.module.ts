@@ -29,9 +29,13 @@ import { CommentComponent } from './comment/comment.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
 import { PersonalComponent } from './personal/personal.component';
 import { NewPersonalComponent } from './new-personal/new-personal.component';
-import { FbaccountComponent } from './fbaccount/fbaccount.component';
-import { NewFbaccountComponent } from './new-fbaccount/new-fbaccount.component';
+import { FbaccountComponent } from './fb-account/fbaccount.component';
+import { NewFbaccountComponent } from './new-fb-account/new-fbaccount.component';
 import { RobotComponent } from './robot/robot.component';
+import { NewRobotComponent } from './new-robot/new-robot.component';
+import { PubCommentComponent } from './pub-comment/pub-comment.component';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 @NgModule({
   imports: [
@@ -63,7 +67,11 @@ import { RobotComponent } from './robot/robot.component';
     NewPersonalComponent,
     FbaccountComponent,
     NewFbaccountComponent,
-    RobotComponent
+    RobotComponent,
+    NewRobotComponent,
+    PubCommentComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   providers: [AuthGuard]
 })

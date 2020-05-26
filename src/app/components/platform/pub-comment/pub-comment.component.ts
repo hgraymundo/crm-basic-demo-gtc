@@ -5,29 +5,30 @@ import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
-  selector: 'app-publication',
-  templateUrl: './publication.component.html',
-  styleUrls: ['./publication.component.css']
+  selector: 'app-pub-comment',
+  templateUrl: './pub-comment.component.html',
+  styleUrls: ['./pub-comment.component.css']
 })
-export class PublicationComponent implements OnInit {
+export class PubCommentComponent implements OnInit {
 
-  object_title = "Publicaciones";
+  object_title = "Commentarios a Publicar";
   // btn_new= "Nuevo Movimiento";
   term: any;
-  Publications: any[];
+  Comments: any[];
   p: number = 1;
   id: any;
 
   constructor(
     private tmpService: TmpService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.tmpService.getPublication(this.id).subscribe( result => {
-      console.log(result);
-      this.Publications = result.data.fb_publications;
+    console.log(this.id)
+    this.tmpService.getPubComment(this.id).subscribe( result => {
+      console.log(result.data[0]);
+      this.Comments = result.data[0];
     })
   }
 }

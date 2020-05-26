@@ -13,7 +13,7 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </li>
                     <li class="nav-item">
-                        <a [routerLink]="['/platform/fb-account']">Cuentas de FB</a>
+                        <a [routerLink]="['/platform/publication', Comments.fb_account_id]">Publicaciones</a>
                     </li>
                     <li class="separator">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
@@ -29,35 +29,38 @@
                         <div class="card-header bg-default card-header-form text-right">
                             <div class="card-options">
                                 <!-- <button type="button" class="btn btn-sm btn-green" (click) = "show()"><i class="fa fa-plus"></i> Nueva Unidad de Medida</button> -->
-                                <!-- <a class="btn btn-xs btn-primary" routerLink="/platform/new-product"><i class="fa fa-plus"></i> {{btn_new}}</a> -->
+                                <a class="btn btn-xs btn-danger" [routerLink]="['/platform/publication', Comments.fb_account_id]"><i class="fa fa-close"></i> {{btn_new}}</a>
                             </div>
                         </div>
                         <div class="card-body card-body-form">
+                            <div class="row" style ="margin-bottom: 10px;">
+                              <div class="col-md-3" style="font-weight: bold">Publicación:</div>
+                              <div class="col-ms-9">
+                                {{ Comments.post_text }}
+                              </div>
+                            </div>
                             <div>
                                 <input type="text" class="form-control input-sm input-search" placeholder='&#xf002; Buscar' [(ngModel)]="term">
                             </div>
                             <table class="table table-sm table-bordered table-hover table-form">
                                 <thead>
                                     <tr class="th-form">
-                                        <th scope="col">Publicación</th>
-                                        <th scope="col">URL</th>
-                                        <th scope="col">Likes</th>
-                                        <th scope="col">Shares</th>
+                                        <th scope="col">Comentario</th>
+                                        <th scope="col">Estado</th>
+  
                                         <th scope="col">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let r of Publications | filter:term | paginate: { itemsPerPage: 10, currentPage: p } " class="tr-result">
-                                        <td width="20%">{{ r.text }}</td>
-                                        <td width="40%">{{ r.post_url }}</td>
-                                         <td width="20%">{{ r.likes }}</td>
-                                        <td width="40%">{{ r.shares }}</td>
-                                        <td width="15%" class="text-right">
+                                    <tr *ngFor="let r of Comments.pub_comments | filter:term | paginate: { itemsPerPage: 10, currentPage: p } " class="tr-result">
+                                        <td>{{ r.text }}</td>
+                                        <td width="10%">{{ r.status }}</td>
+              
+                                        <td width="5%" class="text-right">
                                                 <!-- <button class="card-options-collapse option" (click)="showEliminar(unit.uuid, unit.name)"  data-toggle="card-collapse"><i class="fe fe-trash"></i></button> -->
                                             <!--<a [routerLink]="['/platform/delete-product/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-trash"></i></a> -->
                                             <!--<a [routerLink]="['/platform/update-product/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-edit"></i></a> -->
-                                            <a [routerLink]="['/platform/pub-comment',r.uuid]" class="card-options-remove option" style="margin-left: 5px;" data-toggle="card-remove"><i class="fa fa-comments"></i></a>
-                                            <a [routerLink]="['/platform/new-comment',r.uuid]" class="card-options-remove option" style="margin-left: 5px;" data-toggle="card-remove"><i class="fa fa-plus"></i></a>
+                                            <a [routerLink]="['/platform/product-suppliers/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-trash"></i></a>
 
                                         </td>
                                     </tr>

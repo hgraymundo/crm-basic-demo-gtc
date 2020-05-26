@@ -3,7 +3,6 @@
         <div class="page-inner">
             <div class="page-header">
                 <h4 class="page-title">{{object_title}}</h4>
-                
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -11,7 +10,7 @@
                         <div class="card-header bg-default card-header-form text-right">
                             <div class="card-options">
                                 <!-- <button type="button" class="btn btn-sm btn-green" (click) = "show()"><i class="fa fa-plus"></i> Nueva Unidad de Medida</button> -->
-                                <a class="btn btn-xs btn-primary" routerLink="/platform/new-fbaccount"><i class="fa fa-plus"></i> {{btn_new}}</a>
+                                <a class="btn btn-xs btn-primary" [routerLink]="['/platform/new-fb-account']"><i class="fa fa-plus"></i> {{btn_new}}</a>
                             </div>
                         </div>
                         <div class="card-body card-body-form">
@@ -21,19 +20,17 @@
                             <table class="table table-sm table-bordered table-hover table-form">
                                 <thead>
                                     <tr class="th-form">
-                                        <th scope="col">Usuario FB</th>
-                                        <th scope="col">Estado</th>
+                                        <th scope="col">Cuenta de FB</th>
                                         <th scope="col">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let r of Accounts | filter:term | paginate: { itemsPerPage: 10, currentPage: p } " class="tr-result">
-                                        <td width="40%">{{ r.user}}</td>
-                                        <td width="20%">{{ r.status }}</td>
+                                        <td width="60%">{{ r.user}}</td>
                                         <td width="10%" class="text-right">
                                                 <!-- <button class="card-options-collapse option" (click)="showEliminar(unit.uuid, unit.name)"  data-toggle="card-collapse"><i class="fe fe-trash"></i></button> -->
-                                          <a [routerLink]="['/platform/delete-product/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-trash"></i></a>
-                                          <a [routerLink]="['/platform/new-comment/', r.publication.uuid]" style ="margin-left: 5px;"class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-plus"></i></a>
+                                            <a [routerLink]="['/platform/delete-fb-account/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-trash"></i></a>
+                                            <a [routerLink]="['/platform/publication/',r.uuid]" style="margin-left: 5px;" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-desktop"></i></a>
 
                                         </td>
                                     </tr>
