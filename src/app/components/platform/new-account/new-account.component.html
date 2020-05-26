@@ -1,3 +1,70 @@
-<p>
-  new-account works!
-</p>
+<div class="main-panel">
+    <div class="content">
+        <div class="page-inner">
+            <div class="page-header">
+                <h4 class="page-title">{{object_title}}</h4>
+                 <ul class="breadcrumbs">
+                    <li class="nav-home">
+                        <a href="#">
+                            <i class="flaticon-home"></i>
+                        </a>
+                    </li>
+                    <li class="separator">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/platform/account']">Cuentas</a>
+                    </li>
+                    <li class="separator">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="nav-item current-path">
+                        <a >{{object_title}}</a>
+                    </li>
+                </ul> 
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header bg-default card-header-form text-right ">
+                            <div class="card-options">
+                                <a class="btn btn-xs btn-danger" [routerLink]="['/platform/account']"><i class="fa fa-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label class="bold">Cuenta</label>
+                                            <input type="text" formControlName="account" class="form-control input-modal" [ngClass]="{ 'is-invalid': submitted && f.account.errors }" />
+                                            <div *ngIf="submitted && f.account.errors" class="invalid-feedback">
+                                                <div *ngIf="f.account.errors.required">Una cuenta es necesaria.</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label class="bold">Contraseña</label>
+                                            <input type="text" formControlName="password" class="form-control input-modal" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                <div *ngIf="f.password.errors.required">Un mensaje es necesario.</div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-right">
+                                        <button type="submit" class="btn btn-xs btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

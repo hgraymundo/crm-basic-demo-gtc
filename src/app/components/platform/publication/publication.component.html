@@ -19,7 +19,13 @@
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </li>
                     <li class="nav-item current-path">
-                        <a >{{object_title}}</a>
+                        <a >{{object_title}} de: &nbsp; </a>
+                    </li>
+                     <li class="separator">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </li>
+                    <li class="nav-item current-path">
+                        <a>{{Publications.user}}</a>
                     </li>
                 </ul>  
             </div>
@@ -47,12 +53,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let r of Publications | filter:term | paginate: { itemsPerPage: 10, currentPage: p } " class="tr-result">
-                                        <td width="20%">{{ r.text }}</td>
-                                        <td width="40%">{{ r.post_url }}</td>
-                                         <td width="20%">{{ r.likes }}</td>
-                                        <td width="40%">{{ r.shares }}</td>
-                                        <td width="15%" class="text-right">
+                                    <tr *ngFor="let r of Publications.fb_publications | filter:term | paginate: { itemsPerPage: 10, currentPage: p } " class="tr-result">
+                                        <td width="55%">{{ r.text }}</td>
+                                        <td width="30%">{{ r.post_url }}</td>
+                                         <td width="5%">{{ r.likes }}</td>
+                                        <td width="5%">{{ r.shares }}</td>
+                                        <td width="5%" class="text-right">
                                                 <!-- <button class="card-options-collapse option" (click)="showEliminar(unit.uuid, unit.name)"  data-toggle="card-collapse"><i class="fe fe-trash"></i></button> -->
                                             <!--<a [routerLink]="['/platform/delete-product/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-trash"></i></a> -->
                                             <!--<a [routerLink]="['/platform/update-product/']" class="card-options-remove option" data-toggle="card-remove"><i class="fa fa-edit"></i></a> -->

@@ -1,0 +1,10 @@
+.input-search {
+    padding: 6px 6px 6px 15px !important;
+    font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-size: 10pt !important;
+    font-weight: 300;
+    text-decoration: inherit;
+    border-radius: 0px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}

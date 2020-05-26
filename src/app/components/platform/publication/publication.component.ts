@@ -27,7 +27,8 @@ export class PublicationComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.tmpService.getPublication(this.id).subscribe( result => {
       console.log(result);
-      this.Publications = result.data.fb_publications;
+      
+      this.Publications = result.data;
     })
   }
 }

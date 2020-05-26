@@ -70,11 +70,11 @@ export class TmpService {
   }
 
   getAccount():Observable<any> {
-    return this.http.get<any>("http://51.222.31.215:8181/api/v1/fb_account");
+    return this.http.get<any>("http://51.222.31.215:8181/api/v1/account");
   }
 
   createAccount(data: any):Observable<any> {
-    return this.http.post<any>("http://51.222.31.215:8181/api/v1/fb_account", data);
+    return this.http.post<any>("http://51.222.31.215:8181/api/v1/account", data);
   }
   
   //:::::::::::
