@@ -66,7 +66,9 @@ export class TmpService {
   }
 
   getPubComment(_id: any):Observable<any> {
-    return this.http.get<any>("http://51.222.31.215:8181/api/v1/pub_comment/" + _id);
+    console.log(" IN SERVICE" + _id);
+    // return this.http.get<any>("http://51.222.31.215:8181/api/v1/pub_comment/" + _id);
+    return this.http.get<any>("http://51.222.31.215:8181/api/v1/fb_publication/"+_id+"/comment");
   }
 
   getAccount():Observable<any> {

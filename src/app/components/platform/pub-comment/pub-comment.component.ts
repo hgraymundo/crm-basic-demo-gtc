@@ -26,9 +26,11 @@ export class PubCommentComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     console.log(this.id)
+    console.log("Get Comments")
     this.tmpService.getPubComment(this.id).subscribe( result => {
-      console.log(result.data[0]);
-      this.Comments = result.data[0];
+      console.log(result)
+      console.log(result.data);
+      this.Comments = result.data;
     })
   }
 }
